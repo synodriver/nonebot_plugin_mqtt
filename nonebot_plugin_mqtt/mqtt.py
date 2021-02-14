@@ -8,20 +8,20 @@ driver = nonebot.get_driver()
 config = driver.config
 
 
-async def on_connect(client, flags, rc, properties):
+def on_connect(client, flags, rc, properties):
     client.subscribe(config.mqtt_topic, qos=0)
     logger.info("connected")
 
 
-async def on_message(client, topic, payload, qos, properties):
+def on_message(client, topic, payload, qos, properties):
     logger.info('RECV MSG:', payload)
 
 
-async def on_disconnect(client, packet, exc=None):
+def on_disconnect(client, packet, exc=None):
     logger.info('Disconnected')
 
 
-async def on_subscribe(client, mid, qos, properties):
+def on_subscribe(client, mid, qos, properties):
     logger.info('SUBSCRIBED')
 
 
@@ -38,6 +38,6 @@ async def connect_and_subscribe():
     nonebot.require("nonebot_plugin_mqtt").mqtt_client = client
 
 
-@driver.on_shutdown()
+@driver.on_shutdown
 async def disconnect():
     await nonebot.require("nonebot_plugin_mqtt").mqtt_client.disconnect()

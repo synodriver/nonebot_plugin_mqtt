@@ -1,5 +1,5 @@
 # nonebot_plugin_mqtt
-[![pypi](https://img.shields.io/pypi/v/nonebot-plugin-mqtt.svg)](https://pypi.org/project/nonebot_plugin_mqtt/)
+[![pypi](https://img.shields.io/pypi/v/nonebot-plugin-mqtt.svg)](https://pypi.org/project/nonebot-plugin-mqtt/)
 ![implementation](https://img.shields.io/pypi/implementation/nonebot-plugin-mqtt)
 ![wheel](https://img.shields.io/pypi/wheel/nonebot-plugin-mqtt)
 ![python](https://img.shields.io/pypi/pyversions/nonebot-plugin-mqtt)
