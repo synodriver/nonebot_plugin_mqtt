@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "nonebot-plugin-mqtt"
+version = "0.1.2"
+description = "The iot plugin for nonebot2 framework"
+authors = ["synodriver <diguohuangjiajinweijun@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+packages = [{include = "nonebot_plugin_mqtt"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nonebot2 = {extras = ["fastapi"], version = "^2.0.0"}
+gmqtt = "^0.6.12"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
