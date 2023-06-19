@@ -1,8 +1,9 @@
 from typing import Any, Dict, Tuple
-from gmqtt import Client
-import nonebot
 
+import nonebot
+from gmqtt import Client
 from nonebot.log import logger
+
 from .config import Config
 
 driver = nonebot.get_driver()
