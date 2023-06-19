@@ -1,10 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-config.mqtt_topic
-config.mqtt_client_id
-config.mqtt_host
-config.mqtt_port
-config.mqtt_user
-config.mqtt_password
-"""
-from . import mqtt
+from nonebot.plugin import PluginMetadata
+
+from .config import Config
+from .mqtt import *
+
+
+__plugin_meta__ = PluginMetadata(
+    name="MQTT",
+    description="Nonebot2 MQTT 插件",
+    usage="",
+    type="library",
+    homepage="https://github.com/synodriver/nonebot_plugin_mqtt",
+    config=Config,
+    supported_adapters=None,
+)
